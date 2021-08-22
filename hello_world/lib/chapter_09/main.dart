@@ -1,6 +1,7 @@
+// Setup Firebase configuration before enabling
+/*
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cloud_functions/cloud_functions.dart';
-import 'package:device_info_plus/device_info_plus.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_analytics/observer.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -8,6 +9,8 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
+*/
+import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -20,23 +23,30 @@ import 'package:url_launcher/url_launcher.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  // Setup Firebase configuration before enabling
+  /*
   await Firebase.initializeApp();
   FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
+  */
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
+  // Setup Firebase configuration before enabling
+  /*
   static FirebaseAnalytics analytics = FirebaseAnalytics();
   static FirebaseAnalyticsObserver observer = FirebaseAnalyticsObserver(analytics: analytics);
+  */
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      navigatorObservers: <NavigatorObserver>[observer],
+      // Setup Firebase configuration before enabling
+      //navigatorObservers: <NavigatorObserver>[observer],
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -74,14 +84,20 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
-  FirebaseAuth auth = FirebaseAuth.instance;
-  final _reference = FirebaseDatabase.instance.reference();
-  FirebaseFirestore _firestore = FirebaseFirestore.instance;
   RewardedAd? _myRewarded;
   String? _version;
 
+  // Setup Firebase configuration before enabling
+  /*
+   FirebaseAuth auth = FirebaseAuth.instance;
+   final _reference = FirebaseDatabase.instance.reference();
+   FirebaseFirestore _firestore = FirebaseFirestore.instance;
+  */
+
   @override
   void initState() {
+    // Setup Firebase configuration before enabling
+    /*
     MyApp.observer.analytics.logAppOpen();
     FirebaseAuth.instance.authStateChanges().listen((User? user) {
       if (user == null) {
@@ -94,11 +110,14 @@ class _MyHomePageState extends State<MyHomePage> {
     FirebaseMessaging.onMessage.listen((RemoteMessage msg) {
       print('on message $msg');
     });
+    */
 
     super.initState();
   }
 
   void _signIn() async {
+    // Setup Firebase configuration before enabling
+    /*
     try {
       UserCredential userCredential = await FirebaseAuth.instance.signInWithEmailAndPassword(email: "tom.bailey@example.com", password: "WeLoveFlutter!");
 
@@ -114,18 +133,28 @@ class _MyHomePageState extends State<MyHomePage> {
       }
       _recordCrash(e, stackTrace);
     }
+    */
   }
 
   void _updateRealtimeDatabase() async {
+    // Setup Firebase configuration before enabling
+    /*
     await _reference.child('messages/a3bdj2/deleted').set(true);
+    */
   }
 
   void _updateFirestore() async {
+    // Setup Firebase configuration before enabling
+    /*
     await _firestore.doc('messages/a3bdj2').update({"deleted": true});
+    */
   }
 
   void _recordCrash(Exception e, StackTrace stackTrace) async {
+    // Setup Firebase configuration before enabling
+    /*
     await FirebaseCrashlytics.instance.recordError(e, stackTrace, reason: 'bad times', fatal: true); // or false for non-fatal crashes
+    */
   }
 
   void _loadAdvert() async {
@@ -169,6 +198,8 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void _callCloudFunction() async {
+    // Setup Firebase configuration before enabling
+    /*
     final HttpsCallable callable = FirebaseFunctions.instance.httpsCallable('storeReward', options: HttpsCallableOptions(timeout: Duration(seconds: 30)));
     try {
       await callable.call({
@@ -178,6 +209,7 @@ class _MyHomePageState extends State<MyHomePage> {
     } catch (errorMessage) {
       print(errorMessage);
     }
+    */
   }
 
   void _qrCode() {

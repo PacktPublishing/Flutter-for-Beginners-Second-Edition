@@ -38,16 +38,16 @@ dependencies:
   # Chapter 8
   auto_size_text: ^3.0.0-nullsafety.0 # The null safe version of the plugin
 
-  # Chapter 9
-  firebase_core: ^1.2.0
-  firebase_auth: ^1.2.0
-  firebase_database: ^7.0.0-dev.3
-  cloud_firestore: ^2.2.0
-  firebase_crashlytics: "^2.0.4"
-  firebase_analytics: "^8.1.0"
+  # Chapter 9 - Configure Firebase before enabling plugins
+#  firebase_core: ^1.2.0
+#  firebase_auth: ^1.2.0
+#  firebase_database: ^7.0.0-dev.3
+#  cloud_firestore: ^2.2.0
+#  firebase_crashlytics: "^2.0.4"
+#  firebase_analytics: "^8.1.0"
+#  cloud_functions: 3.0.1
+#  firebase_messaging: 10.0.5
   google_mobile_ads: 0.13.3
-  cloud_functions: 3.0.1
-  firebase_messaging: 10.0.5
   google_maps_flutter: 2.0.6
   google_maps_webservice: 0.0.20-nullsafety.5
   qr_code_scanner: 0.5.2
@@ -60,7 +60,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
+  test: ^1.17.5
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
