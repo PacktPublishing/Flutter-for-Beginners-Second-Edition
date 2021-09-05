@@ -104,7 +104,23 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
-            VerificationCodeFormField(controller: _controller),
+            Form(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  VerificationCodeFormField(controller: _controller),
+                  Builder(
+                    builder: (BuildContext subContext) => ElevatedButton(
+                      onPressed: () {
+                        final valid = Form.of(subContext)?.validate();
+                        print("valid: $valid");
+                      },
+                      child: Text("validate"),
+                    ),
+                  )
+                ],
+              ),
+            ),
           ],
         ),
       ),
