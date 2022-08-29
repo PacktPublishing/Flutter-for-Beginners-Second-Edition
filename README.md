@@ -57,6 +57,9 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 
 * Flutter Cookbook [[Packt]](https://www.packtpub.com/product/flutter-cookbook/9781838823382?utm_source=github&utm_medium=repository&utm_campaign=9781838823382) [[Amazon]](https://www.amazon.com/dp/1838823387)
 
+## Errata 
+ * Page 22 (line 17):  **https://docs.flutter.io/flutter/widgets/Element-class.html ** _should be_ **https://api.flutter.dev/flutter/widgets/Element-class.html**
+
 ## Get to Know the Authors
 **Thomas Bailey**
 has an extensive background in tech, working for companies and high-profile firms as a senior developer, solutions architect, and IT director. His education technology company uses Flutter as the sole technology powering their education apps, and he has enjoyed watching Flutter move from its initial beta release to the fully fledged and highly popular framework we see today. He loves to talk tech over a hot chocolate with anyone who will listen and is constantly exploring the cutting edge of tech and how it will shape our industry in the future.
