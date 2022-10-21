@@ -69,3 +69,7 @@ was born in the beautiful city of Chapecó, in the state of Santa Catarina, sout
 
 ## Other books by the authors
 * [Flutter for Beginners - First Edition](https://www.packtpub.com/product/flutter-for-beginners/9781788996082?utm_source=github&utm_medium=repository&utm_campaign=9781788996082)
+### Download a free PDF
+
+ <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
+<p align="center"> <a href="https://packt.link/free-ebook/9781800565999">https://packt.link/free-ebook/9781800565999 </a> </p>
