@@ -62,6 +62,23 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 
 ## Errata 
  * Page 22 (line 17):  **https://docs.flutter.io/flutter/widgets/Element-class.html ** _should be_ **https://api.flutter.dev/flutter/widgets/Element-class.html**
+ * Page 48 (code snippet 1, line 4):  **print(dynamicList[0]); // Prints "World" ** _should be_ **print(dynamicList[0]); // Prints "Hello"**
+ * Page 59 (code snippet 2): 
+ ```
+ void main() {
+   var hello = sayHello('Robert');
+   print(hello);
+ }
+ // Prints Happy birthday Robert! You are 21 years old.
+```
+ _should be_ 
+  ```
+  void main() {
+    var happyBirthdayMessage = sayHappyBirthday('Robert');
+    print(happyBirthdayMessage);
+  }
+
+  ```
 
 ## Get to Know the Authors
 **Thomas Bailey**
